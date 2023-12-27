@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles1.css" />
+    <script
+      src="https://kit.fontawesome.com/1056a9816d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Update Car</title>
+  </head>
+
+  <body>
+    <div
+      class="container-fluid header p-2 text-bg-secondary d-flex justify-content-center align-items-center h-container"
+    >
+      <header>
+        <h1><i class="fa-solid fa-leaf"></i>Car Rental</h1>
+      </header>
+    </div>
+    <div
+      class="card text-start d-flex justify-content-center align-items-center"
+    >
+      <div class="card-body w-50">
+        <h4 class="card-title">Update Car</h4>
+        <!-- <p class="card-text">Body</p> -->
+        <div class="container">
+          <div class="hisham">
+            <label for="name" class="form-label">Plate Number</label>
+            <input type="text" name="plate" id="plate" class="form-control w-100 " placeholder="Plate"
+                        aria-describedby="helpId" >
+            <label for="" id="nameFady"></label>
+            <label for='update'>Modification</label><br>
+            <label for="" id="nameFady"></label>
+		<select class="Modification">
+			<option value="country">Car Country</option>
+			<option value="model">Model</option>
+			<option value="price">Price</option>
+			<option value="type">Type</option>
+			<option value="color">Color</option>
+            <option value="office">Office Country</option>
+            <option value="details">Details</option>
+			<option value="photo">Photo</option>
+
+		</select>
+        <label for="" id="nameFady"></label>
+        <label for='update'>Element</label><br>
+        <div class="form-label"></div>
+        <label for="" id="nameFady"></label>
+              <a href="signup.html" class="btn w-25 btn-primary py-2 mx-auto d-block">Update</a>
+
+            </div>
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="footer"
+      class="container-fluid p-2 text-bg-secondary d-flex justify-content-center align-items-center h-container"
+    >
+      <footer>
+        <p class="py-3">
+          Developed by Hisham Abosena, Email:Habosena18@icloud.com
+        </p>
+      </footer>
+    </div>
+    <script>
+    document.querySelector('.Modification').addEventListener('change', function(event) {
+  var selectedOption = event.target.value;
+  var inputFieldContainer = document.querySelector('.form-label');
+  // Clear the container first
+  inputFieldContainer.innerHTML = '';
+  // Create new input field based on selected option
+  var newInputField = document.createElement('input');
+  var updateButton = document.querySelector('.btn-primary');
+  newInputField.setAttribute('placeholder', selectedOption);
+  updateButton.parentNode.insertBefore(newInputField, updateButton);
+});
+
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
