@@ -18,23 +18,31 @@
     <title>Admin Functions</title>
   </head>
   <style>
-    main{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    main {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    main>.container{
-        position: relative;
-        top: 300px;
-        left: 550px;
+    main > .container {
+      position: relative;
+      /* top: 300px; */
+      left: 300px;
     }
-    .container>label{
-        display: block;
-        border-radius: 10px;
-        width: 250px;
+    .container > label {
+      display: block;
+      border-radius: 10px;
+      width: 250px;
     }
-    
+    main > .date-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    main > .date-container > .container {
+      margin: 5px 0px;
+    }
   </style>
   <body>
     <div
@@ -232,14 +240,148 @@
         </li>
       </ul>
     </div>
-    <main>
-        <div class="container">
-            <label for="search" class="form-label mx-0 text-bg-primary p-2">Enter the plate number</label>
-            <input type="search" name="search" id="search" placeholder="Enter the plate number:" class="form-control w-auto"
-            onkeyup="Searching(this)"
-            >
-        </div>
-    </main>
+    <div
+      class="card text-start d-flex justify-content-center align-items-center"
+    >
+      <div class="card-body w-50">
+        <h4 class="card-title text-">Search</h4>
+        <form
+          id="myForm"
+          action="search.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="container">
+            <div class="hisham">
+              <label for="text" class="form-label ">Search Type</label>
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="reservationsReport"
+                    value="reservationsReport"
+                    class="form-check-input"
+                    aria-describedby="helpId"
+                  />
+                  <label for="type" class="form-check-label"
+                    >Reservations report</label
+                  >
+                <div class="col">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="reservationReport-2"
+                    value="reservationReport-2"
+                    class="form-check-input"
+                    aria-describedby="helpId"
+                  />
+                  <label for="type" class="form-check-label"
+                    >Reservations report</label
+                  >
+                </div>
+                <div class="col">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="carStatus"
+                    value="carStatus"
+                    class="form-check-input"
+                    aria-describedby="helpId"
+                  />
+                  <label for="type" class="form-check-label">Cars status</label>
+                </div>
+                <div class="col">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="customerReport"
+                    value="customerReport"
+                    class="form-check-input"
+                    aria-describedby="helpId"
+                  />
+                  <label for="type" class="form-check-label"
+                    >Customer report</label
+                  >
+                </div>
+                <div class="col">
+                  <input
+                    type="radio"
+                    name="type"
+                    id="payments"
+                    value="payments"
+                    class="form-check-input"
+                    aria-describedby="helpId"
+                  />
+                  <label for="type" class="form-check-label"
+                    >Daily payments</label
+                  >
+                </div>
+                <label for="" id="nameFady"></label>
+              </div>
+              <label for="Plate" class="form-label">Plate Number</label>
+              <input
+                type="text"
+                name="plate"
+                id="plate"
+                class="form-control w-100"
+                placeholder="Plate"
+                aria-describedby="helpId"
+              />
+              <label for="" id="nameFady"></label>
+              <label for="customerID" class="form-label">Customer ID</label>
+              <input
+                type="text"
+                name="customerID"
+                id="customerID"
+                class="form-control w-100"
+                placeholder="customerID"
+                aria-describedby="helpId"
+              />
+              <label for="" id="nameFady"></label>
+              <label for="number" class="form-label">Date Range</label>
+              <div class="container d-flex justify-content-center">
+                <label for="" id="nameFady"></label>
+                <label for="number" class="form-label">Start Date</label>
+                <input
+                  type="date"
+                  name="Date"
+                  id="Date"
+                  class="form-control w-100"
+                  placeholder="Date"
+                  aria-describedby="helpId"
+                />
+                <label for="" id="nameFady"></label>
+                <label for="" id="nameFady"></label>
+                <label for="number" class="form-label">End Date</label>
+                <input
+                  type="date"
+                  name="Date"
+                  id="Date"
+                  class="form-control w-100"
+                  placeholder="Date"
+                  aria-describedby="helpId"
+                />
+                <label for="" id="nameFady"></label>
+              </div>
+
+              <label for="" id="nameFady"></label>
+              <div
+                class="d-flex justify-content-around align-items-center w-100 my-5"
+              >
+                <input
+                  name="submit"
+                  id="submit"
+                  class="btn w-25 btn-success py-2 my-3"
+                  type="submit"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <div
       id="footer"
       class="container-fluid p-2 text-bg-secondary d-flex justify-content-center align-items-center h-container"

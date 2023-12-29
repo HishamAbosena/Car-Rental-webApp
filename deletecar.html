@@ -31,7 +31,7 @@
     >
       <div class="card-body w-50">
         <h4 class="card-title">Delete Car</h4>
-        <!-- <p class="card-text">Body</p> -->
+        <form id="myForm" action="deletecar.php" method="post">
         <div class="container">
           <div class="hisham">
             <label for="name" class="form-label">Plate Number</label>
@@ -39,20 +39,17 @@
                         aria-describedby="helpId" >
             <label for="" id="nameFady"></label>
             
-              <!-- <input
-                name="signUp"
-                id="signUp"
-                class="btn w-25 btn-primary py-2"
-                type="button"
-                value="Sign Up"
-                
-              /> -->
-              <a href="signup.html" class="btn w-25 btn-danger py-2 mx-auto d-block">Delete</a>
+             
+            <div class="d-flex justify-content-around   align-items-center w-100 my-5">
+              <input name="submit" id="submit" class="btn w-25 btn-danger py-2 my-3 " type="submit"
+                  value="Delete" >
+             
+          </div>
 
             </div>
-            <!-- <small id="helpId" class="text-muted">Help text</small> -->
           </div>
         </div>
+      </form>
       </div>
     </div>
     <div

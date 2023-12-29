@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="styles1.css">
-    <script src="https://kit.fontawesome.com/1056a9816d.js" crossorigin="anonymous"></script>
     <title>Sign Up</title>
 </head>
 
@@ -21,7 +20,7 @@
     <div class="card text-start d-flex justify-content-center align-items-center">
         <div class="card-body w-50">
             <h4 class="card-title">Sign Up</h4>
-            <!-- <p class="card-text">Body</p> -->
+            <form id="myForm" action="signup.php" method="post">
             <div class="container">
                 <div class="hisham">
                     <label for="name" class="form-label ">Username</label>
@@ -30,6 +29,11 @@
                         <label for="" id="nameFady"></label>
                         <label for="email" class="form-label ">Email</label>
                         <input type="text" name="email" id="email" class="form-control w-100 " placeholder="email"
+                            aria-describedby="helpId" >
+                        <label for="" id="nameFady"></label>
+                        <label for="" id="nameFady"></label>
+                        <label for="SSN" class="form-label ">SSN</label>
+                        <input type="number" name="ssn" id="ssn" class="form-control w-100 " placeholder="SSN"
                             aria-describedby="helpId" >
                         <label for="" id="nameFady"></label>
                         <div class="row">
@@ -397,7 +401,7 @@
                      </select>
                      <label for="" id="nameFady"></label>
                      <label for="ccn" class="form-label">Credit Card Number</label>
-                     <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" 
+                     <input id="ccn" name="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" 
                      autocomplete="cc-number" maxlength="19" 
                      placeholder="xxxx xxxx xxxx xxxx" required>
                         <label for="" id="nameFady"></label>
@@ -409,7 +413,7 @@
                     <label for="rememberMe">Remember me</label> -->
 
                     <div class="d-flex justify-content-around   align-items-center w-100 my-5">
-                        <input name="submit" id="submit" class="btn w-25 btn-success py-2 my-3 " type="button"
+                        <input name="submit" id="submit" class="btn w-25 btn-success py-2 my-3 " type="submit"
                             value="Sign Up">
                         <!-- <input name="delete" id="delete" class="btn btn-danger w-25 py-2 my-3 " type="button"
                             value="Forget password"> -->
@@ -417,6 +421,7 @@
                     <!-- <small id="helpId" class="text-muted">Help text</small> -->
                 </div>
             </div>
+            </form>
         </div>
     </div>
     <div id="footer"

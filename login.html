@@ -31,7 +31,7 @@
     >
       <div class="card-body w-50">
         <h4 class="card-title">Login</h4>
-        <!-- <p class="card-text">Body</p> -->
+        <form id="myForm" action="login.php" method="post">
         <div class="container">
           <div class="hisham">
             <label for="name" class="form-label">Username</label>
@@ -67,11 +67,11 @@
 
             <div class="row">
               <div class="col">
-                  <input type="radio" name="type" id="Customer" class="form-check-input" aria-describedby="helpId" >
+                  <input type="radio" name="type" id="Customer" value="Customer" class="form-check-input" aria-describedby="helpId" >
                   <label for="type" class="form-check-label">Customer</label>
               </div>
               <div class="col">
-                  <input type="radio" name="type" id="admin" class="form-check-input" aria-describedby="helpId" >
+                  <input type="radio" name="type" id="admin" value="admin" class="form-check-input" aria-describedby="helpId" >
                   <label for="type" class="form-check-label">Admin</label>
               </div>
            </div>
@@ -83,7 +83,7 @@
                 name="submit"
                 id="submit"
                 class="btn w-25 btn-success py-2 my-3"
-                type="button"
+                type="submit"
                 value="Login"
               />
               <input
@@ -97,19 +97,12 @@
             <div
               class="d-flex justify-content-around align-items-center w-100 my-5"
             >
-              <!-- <input
-                name="signUp"
-                id="signUp"
-                class="btn w-25 btn-primary py-2"
-                type="button"
-                value="Sign Up"
-                
-              /> -->
               <a href="signup.html" class="btn w-25 btn-primary py-2" >Sign Up</a>
             </div>
             <!-- <small id="helpId" class="text-muted">Help text</small> -->
           </div>
         </div>
+        </form>
       </div>
     </div>
     <div
